@@ -1,0 +1,261 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End of reset */
+
+/* Start of custom styles */
+body {
+    /* background: linear-gradient(135deg, hsl(298, 90%, 73%) 0%, #2D5CFE 100%); */
+    background: linear-gradient(270deg, #99f7df, #ffa5f8, #5476ff);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.wrapper {
+    max-width: 750px;
+    margin: 5% auto;
+    padding: 5%;
+    background-color: hsl(0, 0%, 97%, 65%);
+    border-radius: 0.5rem;
+    box-shadow: 0.3em 0.3em 0.8em hsl(0, 0%, 33%, .5);
+}
+/* new to do styling */
+.new-to-do {
+  position: relative;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.new-to-do #ph-add {
+  position: absolute;
+  left: 0.5em;
+  top: 0.65em;
+  color: hsl(0, 0%, 70%);
+}
+.new-to-do input {
+  /* padding-left: 1.5em; */
+  background-color: hsl(0, 0%, 97%);
+  padding: 0.25em 0 0.25em 1.3em;
+  outline: none;
+  border: 1px solid hsl(0, 0%, 70%);
+  width: 92%;
+}
+.new-to-do input:focus {
+  background-color: #fff;
+  border: 1px solid hsl(227, 99%, 59%);
+}
+.new-to-do input::placeholder {
+  color: hsl(0, 0%, 70%);
+}
+.new-to-do #add {
+  background: hsl(227, 99%, 59%);
+  color: #fff;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  padding: 0.25em;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.new-to-do #add:hover {
+  background: linear-gradient(-135deg, hsl(206, 97%, 54%) 0%, hsl(227, 99%, 59%) 100%);
+}
+/* filter styling */
+.filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+ul {
+   list-style: none;
+}
+.filter-wrapper .filters li {
+  cursor: pointer;
+  margin: 0.75em;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+.filter-wrapper .filters :nth-child(1) {
+margin-left: 0;
+}
+.filter-wrapper .clear-done {
+border: 1px solid hsl(227, 99%, 59%);
+color:hsl(227, 99%, 59%);
+background: none;
+cursor: pointer;
+padding: 0.75em 1em;
+}
+.filter-wrapper .clear-done::after {
+content: 'Clear done';
+padding-left: 0.3em;
+}
+.filter-wrapper .clear-done:hover {
+border: 1px solid transparent;
+background: linear-gradient(135deg, hsl(206, 97%, 54%) 0%, hsl(227, 99%, 59%) 100%);
+color:#fff;
+}
+.filter-wrapper .filters .selected {
+ color:hsl(227, 99%, 59%);
+ border-bottom: 1px solid  hsl(227, 99%, 59%);
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: hsl(0, 0%, 70%);
+  margin: 0 auto 1em;
+}
+
+/* to do list styling */
+.task-list {
+  margin-bottom: 1em;
+}
+.task-list .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    border-bottom: 1px dashed hsl(0, 0%, 70%);
+}
+.task-list ul:nth-child(1) {
+  padding-top: 0;
+}
+.task label {
+    display: flex;
+    justify-content: flex-start;
+}
+.task label input {
+  margin-right: 0.75em;
+  border: 1px solid hsl(0, 0%, 70%);
+  outline: none;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+.modify {
+  padding-right: 0.25em;
+  cursor: pointer;
+  position: relative;
+}
+.modify ul {
+  position: absolute;
+  background-color: #fff;
+  width: 7em;
+  right: -0.3em;
+  top: -0.2em;
+  z-index: 10;
+  border: none;
+  box-shadow: 0.1em 0.1em 0.3em hsla(0, 0%, 0%, 0.425);
+  padding: 0.2em 0;
+  transform: scale(0);
+  transition: 0.2s ease;
+  transform-origin: top right;
+}
+.modify ul.show {
+  transform: scale(1);
+}
+
+.modify ul li {
+ padding: 0.15em 1em;
+}
+.modify ul li:hover {
+  background-color: hsl(0, 0%, 93%);
+ }
+.modify ul li i {
+  margin-right: 0.5em;
+}
+.test {
+  background-color: #2D5CFE;
+}

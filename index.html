@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e1c62bf496.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;900&family=Merriweather:wght@100;300;400;600;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/to_do_app_icon_4x_apple_touch.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/to_do_app_icon_4x_32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/to_do_app_icon_4x_16x16.png">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <title>To Do</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="new-to-do">
+            <i class="fa-regular fa-plus" id="ph-add"></i>
+            <!-- <i class="fa-regular fa-pen-to-square"></i> -->
+            <input type="text" placeholder="Add a new to do">
+            <i class="fa-solid fa-plus" id="add"></i>
+        </div>
+        <div class="filter-wrapper">
+            <ul class="filters">
+                <li id="all" class="selected">all</li>
+                <li id="pending">pending</li>
+                <li id="done">done</li>
+            </ul>
+            <button class="clear-done">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+        </div>
+        <div class="divider"></div>
+        <div class="task-list">
+            <ul>
+                <!--new todo's get inserted here-->
+            </ul>
+        </div>
+        
+
+
+    </div>
+</body>
+</html>
