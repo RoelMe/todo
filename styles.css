@@ -145,11 +145,15 @@ body {
   display: inline-block;
   text-align: center;
   padding: 0.25em;
-  border: 1px solid transparent;
   cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s;
 }
 .new-to-do #add:hover {
-  background: linear-gradient(-135deg, hsl(206, 97%, 54%) 0%, hsl(227, 99%, 59%) 100%);
+  background: linear-gradient(50deg, hsl(206, 97%, 54%) 0%, hsl(227, 99%, 59%) 100%);
+}
+.new-to-do #add:active {
+    transform: scale(0.96);
 }
 /* filter styling */
 .filter-wrapper {
@@ -176,6 +180,8 @@ color:hsl(227, 99%, 59%);
 background: none;
 cursor: pointer;
 padding: 0.75em 1em;
+transform: scale(1);
+transition: 0.3s;
 }
 .filter-wrapper .clear-done::after {
 content: 'Clear done';
@@ -185,6 +191,11 @@ padding-left: 0.3em;
 border: 1px solid transparent;
 background: linear-gradient(135deg, hsl(206, 97%, 54%) 0%, hsl(227, 99%, 59%) 100%);
 color:#fff;
+
+}
+.filter-wrapper .clear-done:active {
+  transform: scale(0.96);
+  border: 1px solid transparent;
 }
 .filter-wrapper .filters .selected {
  color:hsl(227, 99%, 59%);
