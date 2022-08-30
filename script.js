@@ -1,3 +1,4 @@
+const dateDisplay = document.querySelector('.date')
 const taskInput = document.querySelector('.new-to-do input')
 const taskAdd = document.querySelector('.new-to-do #add')
 let todos = JSON.parse(localStorage.getItem('todo-list')) //create a variable n empty object called todo-list in local storage
@@ -6,6 +7,13 @@ let clearDone = document.querySelector('.clear-done')
 let filters = document.querySelectorAll('.filters li')
 let editedId
 let isEditedTask = false
+
+var today = new Date()
+// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+var date = today.toLocaleDateString(undefined, options)
+
+dateDisplay.innerText = date
 
 function showToDo(filter) {
     let li = ''

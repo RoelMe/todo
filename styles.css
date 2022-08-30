@@ -105,10 +105,15 @@ body {
 .wrapper {
     max-width: 750px;
     margin: 5% auto;
-    padding: 5%;
+    padding: 3em;
     background-color: hsl(0, 0%, 97%, 65%);
     border-radius: 0.5rem;
     box-shadow: 0.3em 0.3em 0.8em hsl(0, 0%, 33%, .5);
+}
+/* header styling */
+header {
+  text-align: center;
+  margin-bottom: 2em;
 }
 /* new to do styling */
 .new-to-do {
@@ -231,9 +236,15 @@ color:#fff;
   border: 1px solid hsl(0, 0%, 70%);
   outline: none;
 }
+input[type="checkbox"] {
+  border: 1px solid hsl(0, 0%, 70%);
+  border-radius: 0px;
+  background-color: #ffa5f8;
+}
 
 .checked {
   text-decoration: line-through;
+  color:hsl(0, 0%, 50%)
 }
 .modify {
   padding-right: 0.25em;
