@@ -104,7 +104,8 @@ body {
   100%{background-position:0% 50%}
 }
 .wrapper {
-    max-width: 750px;
+    /* max-width: 750px; */
+    max-width: min(95%, 750px);
     margin: 5% auto;
     padding: 3em;
    /*  background-color: hsl(0, 0%, 97%, 65%);
@@ -121,14 +122,16 @@ body {
 /* header styling */
 header {
   text-align: center;
-  margin-bottom: 5em;
+  /* margin-bottom: 5em; */
+  margin-bottom: 2em;
   position: relative;
 }
 .arrow {
   width: 5rem;
   transform: rotate(315deg);
   position: absolute;
-  right: 10em;
+  /* right: 10em; */
+  display: none;
   /* transform: translateY(-10px); */
 }
 /* new to do styling */
@@ -165,7 +168,7 @@ header {
   font-size: 1.5rem;
   display: inline-block;
   text-align: center;
-  padding: 0.25em;
+  padding: 0.2em;
   cursor: pointer;
   transform: scale(1);
   transition: 0.3s;
@@ -179,6 +182,7 @@ header {
 /* filter styling */
 .filter-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
@@ -298,6 +302,17 @@ input[type="checkbox"] {
 .modify ul li i {
   margin-right: 0.5em;
 }
-.test {
-  background-color: #2D5CFE;
+
+@media (min-width: 600px) {
+  header {
+    margin-bottom: 5em;
+  }
+  .arrow {
+    display: block;
+    right: 10em;
+  }
+  .filter-wrapper {
+    flex-direction: row;
+  }
+
 }
